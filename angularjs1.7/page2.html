@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+    <meta charset='utf-8'>
+    <title>Welcome to Angular JS 1.7</title>
+    <script src="angular.js">
+        //NOTHING IN HERE....
+    </script>
+    <script>
+    var myapp = angular.module('myapp',[]);        
+    myapp.controller(
+        //controller
+        "helloCtrl",function helloController($scope){
+                ///model component
+                $scope.person = {name:"mahendra", gender: "male"};
+        }   
+    );
+    </script>
+</head>
+<body> <!--view -->
+    <h2 ng-controller="helloCtrl" >{{ person.gender }} specimen found with name {{ person.name}}</h2>
+    
+</body>
+</html>
