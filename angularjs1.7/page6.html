@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+    <meta charset='utf-8'>
+    <title>Welcome to Angular JS 1.7</title>
+    <script src="angular.js">
+        //NOTHING IN HERE....
+    </script>
+    <script>
+    var myapp = angular.module('myapp',[]);        
+    myapp.controller(
+        //controller
+        "helloCtrl",function helloController($scope){
+                ///model component
+                $scope.person = {name:"", age: ""};
+
+                $scope.people = [ 
+                    { name: 'Akash Ambani', age: 28},
+                    { name: 'Tina Ambani', age: 51}
+                ];
+                $scope.add = function(){
+                    var p = {};
+                    p.name = $scope.person.name;
+                    p.age = $scope.person.age;
+                    $scope.people.push(p);
+                }
+        }   
+    );
+    </script>
+</head>
+<body> <!--view -->
+    <div ng-controller="helloCtrl" >
+        <table>
+            <tr>
+                <th> Name </th>
+                <th> Age </th>
+            </tr>
+            <tr ng-repeat="p in people">
+                    <td> {{p.name}} </td>
+                    <td> {{p.age}} </td>
+                </tr>
+        </table>
+
+        <form>
+            Enter name: <input type="text" ng-model="person.name" />
+            Enter age : <input type="text" ng-model="person.age" />
+            <input type="button" value="Add" ng-click="add()"/>
+        </form>
+
+        
+    </div>
+    
+</body>
+</html>
