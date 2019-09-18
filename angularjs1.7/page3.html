@@ -9,16 +9,15 @@
     </script>
 </head>
 <body ng-app="myapp"> <!--view -->
-    <p ng-controller="helloCtrl" >
-        {{ xyz }}
-        {{ people[0].firstName}}
-        <ul ng-repeat="person in people">
-            <li >
+    <div ng-controller="helloCtrl" >
+    
+        <ul>
+            <li  ng-repeat="person in people">
                 <span>{{ person.firstName }}</span> <span>{{ person.lastName }}</span> 
             </li>
         </ul>
 
-    </p>
+    </div>
     
 </body>
 </html>
