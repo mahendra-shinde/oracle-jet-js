@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset='utf-8'>
     <title>Welcome to Angular JS 1.7</title>
     <script src="angular.js">
-        //NOTHING IN HERE....
     </script>
-    <script src="page3.js">
-  
+    <script src="page3.js">  
     </script>
 </head>
 <body ng-app="myapp"> <!--view -->
     <p ng-controller="helloCtrl" >
-        <ol>
-            <li ng-repeat="p in people">
-                <span>{{p.firstName}}</span> <span>{{pp.lastName}}</span> 
+        {{ xyz }}
+        {{ people[0].firstName}}
+        <ul ng-repeat="person in people">
+            <li >
+                <span>{{ person.firstName }}</span> <span>{{ person.lastName }}</span> 
             </li>
-        </ol>
+        </ul>
 
     </p>
     
