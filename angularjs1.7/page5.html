@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+    <meta charset='utf-8'>
+    <title>Welcome to Angular JS 1.7</title>
+    <script src="angular.js">
+        //NOTHING IN HERE....
+    </script>
+    <script>
+    var myapp = angular.module('myapp',[]);        
+    myapp.controller(
+        //controller
+        "helloCtrl",function helloController($scope){
+                ///model component
+                $scope.person = {name:"mahendra", gender: "male"};
+                $scope.changeCase = function(){
+                    var x= $scope.person.name.toLowerCase();
+                    console.log(x);
+                    $scope.person.name = x;
+                }
+                $scope.reset = function(){
+                    $scope.person.name= "";
+                    $scope.person.gender="";
+                }
+        }   
+    );
+    </script>
+</head>
+<body> <!--view -->
+    <div ng-controller="helloCtrl" >
+        <Form>
+            Enter name: <input type="text" ng-model="person.name" />
+            Gender : <input type="text" ng-model="person.gender" />
+            <input type="button" value="lowercase" ng-click="changeCase()"/>
+            <input type="reset" value="reset" ng-click="reset()"/>
+            
+        </Form>
+
+        {{ person.name }}
+    </div>
+    
+</body>
+</html>
