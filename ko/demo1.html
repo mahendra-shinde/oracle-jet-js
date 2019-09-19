@@ -9,15 +9,16 @@
 <body>
     <div>
         Name: <input type="text" data-bind="value: name"  /><br/>
-        Alive : <span data-bind="text: isAlive"></span>
+        Alive : <input type=radio name="Alive" value="yes" data-bind="checked: isAlive"/>Alive
+        <input type=radio name="Alive" value="no" data-bind="checked: isAlive"/>Dead
     </div>
 </body>
 <script>
-    var viewModel = function(name, isalive,color){
+    var viewModel = function(name, isalive){
         //Track the changes to "name" and update it !!
         this.name =ko.observable(name);
         this.isAlive = ko.observable(isalive);
     }
-    ko.applyBindings(new viewModel("Mel Gibson",true));
+    ko.applyBindings(new viewModel("Mel Gibson",'yes'));
     </script>
 </html>
