@@ -67,3 +67,9 @@
         console.log("server started on port 5000");
     }); 
     ```
+5.  Install express js using npm and then run the server.js
+
+    ```bash
+    $ npm install express
+    $ node server.js
+    ```
