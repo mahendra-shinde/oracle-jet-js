@@ -1,0 +1,24 @@
+<!--
+ Copyright (c) 2014, 2019, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+  <h1>Incidents Content Area</h1>
+  <div>
+      <div id="form-container">
+      <oj-form-layout max-columns="3" direction="column">
+      
+      <oj-input-text value="{{uname}}"  label-hint="user name"></oj-input-text>
+      <oj-input-text value="{{uemail}}" label-hint="user email" ></oj-input-text>
+      <oj-input-date value="{{udob}}" label-hint="date of birth"></oj-input-date>
+      <oj-button >Submit</oj-button>
+        </oj-form-layout>
+      </div>
+
+      Username :<span data-bind="text: uname"></span>
+      Email : <span data-bind="text: uemail"></span>
+      <p>
+      To change the content of this section, you will make edits to the incidents.html file located in the /js/views folder.
+    </p>
+  </div>
+</div>
