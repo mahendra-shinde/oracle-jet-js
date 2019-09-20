@@ -23,9 +23,14 @@
           Mind control.
           </div>
         </div></li>
-        
     </ul>
   </oj-list-view>
+  <div class="container oj-panel">
+    <h2>The Data Table demo</h2>
+    <oj-table data="[[empDataProvider]]" columns='[{"headerText":"X-Men Title", "field":"title", "headerClassName":"oj-sm-only-hide"},
+    {"headerText":"Real name", "field":"realName", "headerClassName":"oj-sm-only-hide"}]'>
+    </oj-table>
+  </div>
   <div>
       To change the content of this section, you will make edits to the dashboard.html file located in the /js/views folder.
   </div>

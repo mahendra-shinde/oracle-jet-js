@@ -45,7 +45,7 @@ requirejs.config(
  * object in the callback
  */
 require(['ojs/ojbootstrap', 'knockout', 'appController', 'ojs/ojlogger', 'ojs/ojrouter', 'ojs/ojknockout',
-  'ojs/ojmodule', 'ojs/ojnavigationlist', 'ojs/ojbutton', 'ojs/ojtoolbar', 'ojs/ojinputtext', 'ojs/ojlabel', 'ojs/ojformlayout', 'ojs/ojdatetimepicker', 'ojs/ojtimezonedata','ojs/ojselectcombobox','ojs/ojlistview'],
+  'ojs/ojmodule', 'ojs/ojnavigationlist', 'ojs/ojbutton', 'ojs/ojtoolbar', 'ojs/ojinputtext', 'ojs/ojlabel', 'ojs/ojformlayout', 'ojs/ojdatetimepicker', 'ojs/ojtimezonedata','ojs/ojselectcombobox','ojs/ojlistview','ojs/ojtable','ojs/ojarraydataprovider'],
   function (Bootstrap, ko, app, Logger, Router) { // this callback gets executed when all required modules are loaded
     Bootstrap.whenDocumentReady().then(
       function() {

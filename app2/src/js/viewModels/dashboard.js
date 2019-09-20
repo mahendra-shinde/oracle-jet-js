@@ -6,14 +6,18 @@
 /*
  * Your dashboard ViewModel code goes here
  */
-define([],
- function() {
+define(['ojs/ojtable','ojs/ojarraydataprovider'],
+ function(ko,ArrayDataProvider) {
 
     function DashboardViewModel() {
       var self = this;
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
+      self.empArray = [{title:'Wolverine', age: 127, nationality: 'Canadian', realName: 'James logan'},
+      {title:'Magneto', age: 83, nationality: 'German', realName: '????'},
+      {title:'Professor X', age: 77, nationality: 'British', realName: 'Charles Xavior'}];
 
+      self.empDataProvider = new ArrayDataProvider(self.empArray, {keyAttributes: 'title', implicitSort: [{attribute: 'title',direction:'ascending'}]});
       /**
        * Optional ViewModel method invoked after the View is inserted into the
        * document DOM.  The application can put logic that requires the DOM being

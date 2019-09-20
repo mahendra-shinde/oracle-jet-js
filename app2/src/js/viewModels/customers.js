@@ -6,13 +6,23 @@
 /*
  * Your customer ViewModel code goes here
  */
-define([],
- function() {
+define(['knockout','ojs/ojarraydataprovider','ojs/ojchart','ojs/ojbootstrap'],
+ function(ko,ArrayDataProvider) {
 
     function CustomerViewModel() {
       var self = this;
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
+      var barSeries = [
+        {name : "Finance", items : [42000, 55000]},
+        {name : "Purchase", items : [55000, 70000]},
+        {name : "Service", items : [36000, 50000]},
+        {name : "Administration", items : [28000, 65000]},
+        {name : "HR", items : [25000, 60000]}
+        ];
+        var barGroups = ["Average Salary", "Max Salary"];
+        self.barSeriesValue = ko.observableArray(barSeries);
+        self.barGroupsValue = ko.observableArray(barGroups);
 
       /**
        * Optional ViewModel method invoked after the View is inserted into the
